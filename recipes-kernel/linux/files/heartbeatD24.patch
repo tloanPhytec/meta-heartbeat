@@ -1,0 +1,16 @@
+diff --git a/arch/arm64/boot/dts/ti/k3-am625-phyboard-lyra-rdk.dts b/arch/arm64/boot/dts/ti/k3-am625-phyboard-lyra-rdk.dts
+index f1a801826..d14779376 100644
+--- a/arch/arm64/boot/dts/ti/k3-am625-phyboard-lyra-rdk.dts
++++ b/arch/arm64/boot/dts/ti/k3-am625-phyboard-lyra-rdk.dts
+@@ -14,4 +14,11 @@ / {
+ 	model = "PHYTEC phyBOARD-Lyra AM625";
+ 	compatible = "phytec,am625-phyboard-lyra-rdk",
+ 		     "phytec,am62-phycore-som", "ti,am625";
++
++	user-leds {
++            user-led0 {
++                    label = "cb-heartbeat";
++                    linux,default-trigger = "heartbeat";
++            };
++	};
+ };
